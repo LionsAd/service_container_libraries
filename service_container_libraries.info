@@ -1,0 +1,11 @@
+name = Service Container Libraries
+description = Libraries for the Service Container module.
+package = Novelty
+core = 7.x
+php = 5.3.10
+
+; Dependencies
+dependencies[] = registry_autoload
+
+registry_autoload[] = PSR-0
+registry_autoload[] = PSR-4
