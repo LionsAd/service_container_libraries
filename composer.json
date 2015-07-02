@@ -3,7 +3,6 @@
   "description": "Service Container Libraries",
   "type": "drupal-module",
   "homepage": "https://www.drupal.org/project/service_container",
-  "license": "GPL-2.0+",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "authors": [
