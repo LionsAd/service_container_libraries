@@ -15,10 +15,11 @@
     "psr-0": {
       "Drupal\\Component\\": "lib/",
       "Drupal\\Core\\": "lib/",
-      "ServiceContainer": "lib/",
-      "Drupal": "lib/",
-      "Symfony\\Component\\DependencyInjection": "lib/",
-      "Psr": "lib/"
+      "Doctrine\\": "lib/",
+      "Symfony\\Component\\DependencyInjection\\": "lib/",
+      "Symfony\\Component\\HttpFoundation\\": "lib/",
+      "Symfony\\Component\\Yaml\\": "lib/",
+      "Psr\\Log\\": "lib/"
     },
   },
 }
