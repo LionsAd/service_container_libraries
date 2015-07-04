@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains Drupal\Component\FileCache\FileCacheFactory.
+ * Contains \Drupal\Component\FileCache\FileCacheFactory.
  */
 
 namespace Drupal\Component\FileCache;
@@ -38,15 +38,15 @@ class FileCacheFactory {
    * @return \Drupal\Component\FileCache\FileCacheInterface
    *   The initialized FileCache object.
    */
-  public static function get($collection, $default_configuration = array()) {
-    $default_configuration += array(
+  public static function get($collection, $default_configuration = []) {
+    $default_configuration += [
       'class' => '\Drupal\Component\FileCache\FileCache',
       'collection' => $collection,
       'cache_backend_class' => NULL,
-      'cache_backend_configuration' => array(),
-    );
+      'cache_backend_configuration' => [],
+    ];
 
-    $configuration = array();
+    $configuration = [];
     if (isset(static::$configuration[$collection])) {
       $configuration = static::$configuration[$collection];
     }
