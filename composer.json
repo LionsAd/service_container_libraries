@@ -20,6 +20,6 @@
       "Symfony\\Component\\HttpFoundation\\": "lib/",
       "Symfony\\Component\\Yaml\\": "lib/",
       "Psr\\Log\\": "lib/"
-    },
-  },
+    }
+  }
 }
