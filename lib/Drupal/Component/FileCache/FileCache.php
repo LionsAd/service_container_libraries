@@ -80,8 +80,8 @@ class FileCache implements FileCacheInterface {
    * {@inheritdoc}
    */
   public function getMultiple(array $filepaths) {
-    $file_data = [];
-    $remaining_cids = [];
+    $file_data = array();
+    $remaining_cids = array();
 
     // First load from the static cache what we can.
     foreach ($filepaths as $filepath) {
@@ -109,7 +109,7 @@ class FileCache implements FileCacheInterface {
 
     // If there are any cache IDs left to fetch from the cache backend.
     if ($remaining_cids && $this->cache) {
-      $cache_results = $this->cache->fetch(array_keys($remaining_cids)) ?: [];
+      $cache_results = $this->cache->fetch(array_keys($remaining_cids)) ?: array();
       foreach ($cache_results as $cid => $cached) {
         $filepath = $remaining_cids[$cid];
         if ($cached['mtime'] == filemtime($filepath)) {
@@ -127,11 +127,11 @@ class FileCache implements FileCacheInterface {
    */
   public function set($filepath, $data) {
     $realpath = realpath($filepath);
-    $cached = [
+    $cached = array(
       'mtime' => filemtime($filepath),
       'filepath' => $filepath,
       'data' => $data,
-    ];
+    );
 
     $cid = $this->prefix . ':' . $this->collection . ':' . $realpath;
     static::$cached[$cid] = $cached;
